@@ -4,19 +4,27 @@
 
 | 指标 | 数值 |
 |------|------|
-| 任务总数 | 35（24 Mini + 11 MacBook） |
+| 任务总数 | 40（34 启用 + 6 停用） |
 | 脚本数 | 77（50 .py + 27 .sh） |
 | Agent 提示词 | 13 |
 | 投递通道 | 飞书 + 微信 + delivery-queue |
 | 存储后端 | iCloud Drive (Obsidian Vault) |
-| 模型 | deepseek-v4-pro + deepseek-v4-flash |
+| 双机部署 | Mac Mini (24) + MacBook (10 保留 + 6 停用) |
+| 最新更新 | 2026-05-27 |
+
+## 最近变更
+
+| 日期 | 变更 |
+|------|------|
+| 05-27 | 脚本同步：obsidian-git-sync 加 pull-rebase + 日志轮转，notebooklm-sync 阈值调整，notebooklm-keepalive cookie 续期，wrapper-notebooklm-upload bash 3.2 兼容，wechat-batch-deliver encoding 修复，export-obsidian/run-vault-maintenance 路径修正 |
+| 05-27 | 初始上传：系统设计文档 + Mac Mini 部署方案 + 脚本 + 提示词 + 配置 |
 
 ## 目录结构
 
 ```
 ├── README.md
-├── system-design.md              # 系统设计文档（31KB, 9章）
-├── mac-mini-deployment.md        # Mac Mini 双机部署方案（17KB, 14风险对策）
+├── system-design.md              # 系统设计文档（9章，含架构/数据流/移植指南）
+├── mac-mini-deployment.md        # Mac Mini 双机部署方案（14风险对策）
 ├── config/
 │   ├── config.yaml               # Hermes 配置（已脱敏）
 │   ├── SOUL.md                   # Agent personality
@@ -25,19 +33,6 @@
 │   ├── *.py                      # Python 脚本（vault维护/投递/监控/NotebookLM）
 │   └── *.sh                      # Shell 脚本（备份/同步/管线）
 └── prompts/                      # 13 个 Agent 任务提示词
-    ├── 晨间AI情报简报合并.md
-    ├── 晚间AI情报快讯合并.md
-    ├── 每日AI-Agent面试问答日报.md
-    ├── AI-Agent-每日内容生成.md
-    ├── 豆瓣-Top250-每日一书解读.md
-    ├── 每日名言+解读.md
-    ├── 每日阅读清单.md
-    ├── 周报自动生成.md
-    ├── 播客转文字摘要.md
-    ├── 内容工厂-早间.md
-    ├── 内容工厂-午间.md
-    ├── 闲鱼选品+文案生成.md
-    └── Obsidian-orphan-checker.md
 ```
 
 ## 任务分类
@@ -51,6 +46,7 @@
 | 自检/恢复/报告 | 3 | Mac Mini |
 | 备份/管线 | 5 | MacBook |
 | 监控/健康/NotebookLM | 5 | MacBook |
+| 其他（内容工厂/闲鱼/变现） | 5 | Mac Mini |
 
 ## 关键脚本
 
@@ -63,6 +59,7 @@
 - `vault_health.py` — 健康巡检
 - `vault_master_index_update.py` — 知识库总索引更新
 - `orphan_checker.py` — 新孤岛检测 + 自动补链
+- `run_vault_maintenance.sh` — 知识库自动维护流水线
 
 ### 投递
 - `wechat-batch-deliver.sh` — 队列批量微信投递（早中晚 ×3）
@@ -75,24 +72,27 @@
 
 ### NotebookLM
 - `notebooklm-sync.py` — Playwright 浏览器自动上传 (v3)
-- `notebooklm-session-keepalive.py` — 每日 cookie 续期
+- `notebooklm-session-keepalive.py` — 每 6h cookie 续期
 - `wrapper-notebooklm-upload.sh` — 7 分类上传调度器
 - `export-obsidian-to-notebooklm.sh` — 清洁笔记导出
+
+### Git 同步
+- `obsidian-git-sync.sh` — vault git add/commit/pull-rebase/push + 日志轮转
 
 ## 快速开始
 
 详见 [移植指南](system-design.md#8-移植指南) 和 [Mac Mini 部署方案](mac-mini-deployment.md)。
 
-```
+```bash
 # 1. 安装 Hermes
 curl -fsSL https://hermes-agent.nousresearch.com/install.sh | sh
 
 # 2. 同步配置
 rsync -avz scripts/ target:.hermes/scripts/
 rsync -avz config/ target:.hermes/profiles/minimal/
-# 修正路径 sed s/<olduser>/<newuser>/g
+# 修正路径: sed -i '' 's|<olduser>|<newuser>|g'
 
-# 3. 启动
+# 3. 启动（关键：必须指定 profile）
 hermes --profile minimal gateway start
 hermes --profile minimal cron list
 ```
