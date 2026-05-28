@@ -1,5 +1,5 @@
 #!/bin/bash
-# Obsidian Vault auto git sync — silent when nothing to do
+# Obsidian Vault auto git sync — v2: pull-first to avoid rebase conflicts
 # Designed for cron use (no_agent mode): empty stdout = silent, non-empty = delivered
 
 export HOME="/Users/liuwei"
@@ -17,30 +17,46 @@ if [ -f "$LOG" ]; then
     fi
 fi
 
-# Check if there are any changes
+# ── Step 1: Pull remote first (stash local if needed) ──
+NEED_STASH=false
+if ! git diff --quiet || ! git diff --cached --quiet; then
+    NEED_STASH=true
+    git stash push -m "auto-sync stash $(date +%Y%m%d-%H%M)" >> "$LOG" 2>&1
+fi
+
+PULL_OK=false
+if git pull --rebase origin main >> "$LOG" 2>&1; then
+    PULL_OK=true
+else
+    echo "$(date '+%Y-%m-%d %H:%M') — Pull failed, aborting rebase"
+    git rebase --abort 2>/dev/null || true
+    if $NEED_STASH; then
+        git stash pop >> "$LOG" 2>&1 || true
+    fi
+fi
+
+# Restore stashed changes if pull succeeded
+if $NEED_STASH && $PULL_OK; then
+    git stash pop >> "$LOG" 2>&1 || true
+fi
+
+# ── Step 2: Check if there are local changes to commit ──
 if ! git status --porcelain | grep -q .; then
     # No changes — silent exit (watchdog pattern)
-    echo ""
     exit 0
 fi
 
-# Changes detected — commit and push
+# ── Step 3: Stage and commit ──
 echo "$(date '+%Y-%m-%d %H:%M') — Changes detected"
 
-# Add everything
 git add -A >> "$LOG" 2>&1
 
-# Count changes for commit message
 CHANGED=$(git diff --cached --stat | tail -1 | awk '{print $1" files changed"}' || echo "changes")
 
-# Commit
 git commit -m "auto sync: $(date '+%Y-%m-%d %H:%M') — ${CHANGED}" >> "$LOG" 2>&1
 echo "  Committed: ${CHANGED}"
 
-# Pull first to avoid rejected push
-git pull --rebase origin main >> "$LOG" 2>&1
-
-# Push
+# ── Step 4: Push ──
 if git push origin main >> "$LOG" 2>&1; then
     echo "  Pushed successfully"
 else

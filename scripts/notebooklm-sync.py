@@ -257,10 +257,13 @@ def upload_files_v3(files: list[dict], notebook_name: str) -> dict:
                     return {"success": False, "message": "Google session 已过期，请重新登录",
                             "session_expired": True}
 
-                # 点击 add 按钮创建新 notebook
+                # 点击 add 按钮创建新 notebook（多策略选择器）
                 add_btn = page.query_selector(
-                    'button:has-text("add"), mat-icon:has-text("add")'
+                    'button:has-text("add"), button:has-text("新建"), mat-icon:has-text("add")'
                 )
+                if not add_btn:
+                    # 备选：直接找 project-button 中的 add 区域
+                    add_btn = page.query_selector('project-button:has-text("新建")')
                 if add_btn:
                     add_btn.click(timeout=10000)
                     page.wait_for_timeout(3000)
@@ -475,7 +478,7 @@ def main():
     
     # 重新读取最新 state（via upload_files_v3 内部可能已更新）
     updated_state = load_state()
-    uploaded_count = result["count"]
+    uploaded_count = result.get("count", 0) if isinstance(result, dict) else 0
     
     if uploaded_count > 0 or result.get("success"):
         # P4: 更新 notebook 来源计数

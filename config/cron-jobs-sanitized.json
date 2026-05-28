@@ -19,15 +19,15 @@
       "schedule_display": "50 1 * * *",
       "repeat": {
         "times": null,
-        "completed": 25
+        "completed": 27
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T23:36:54.841857+08:00",
-      "next_run_at": "2026-05-27T01:20:00+08:00",
-      "last_run_at": "2026-05-26T01:20:29.480200+08:00",
+      "next_run_at": "2026-05-29T01:20:00+08:00",
+      "last_run_at": "2026-05-28T01:33:52.655600+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -58,15 +58,15 @@
       "schedule_display": "0 */6 * * *",
       "repeat": {
         "times": null,
-        "completed": 85
+        "completed": 91
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-05T22:12:51.617128+08:00",
-      "next_run_at": "2026-05-27T06:00:00+08:00",
-      "last_run_at": "2026-05-27T00:00:27.343126+08:00",
+      "next_run_at": "2026-05-28T18:00:00+08:00",
+      "last_run_at": "2026-05-28T12:00:56.085516+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -97,15 +97,15 @@
       "schedule_display": "0 12,20 * * *",
       "repeat": {
         "times": null,
-        "completed": 38
+        "completed": 40
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-08T20:15:43.219065+08:00",
-      "next_run_at": "2026-05-27T12:00:00+08:00",
-      "last_run_at": "2026-05-26T12:28:24.674891+08:00",
+      "next_run_at": "2026-05-29T12:00:00+08:00",
+      "last_run_at": "2026-05-28T12:10:01.062131+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -133,15 +133,15 @@
       "schedule_display": "10 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T21:38:07.202661+08:00",
-      "next_run_at": "2026-05-27T02:30:00+08:00",
-      "last_run_at": "2026-05-26T02:31:08.952462+08:00",
+      "next_run_at": "2026-05-29T02:30:00+08:00",
+      "last_run_at": "2026-05-28T03:29:08.787551+08:00",
       "last_status": "error",
       "last_error": "Script execution failed: 'utf-8' codec can't decode byte 0xe4 in position 72: invalid continuation byte",
       "last_delivery_error": null,
@@ -174,24 +174,24 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-17T08:10:43.694861+08:00",
-      "last_run_at": "2026-05-26T21:00:24.625247+08:00",
+      "last_run_at": "2026-05-27T21:01:14.829555+08:00",
       "last_status": "ok",
       "last_error": null,
-      "last_delivery_error": "delivery error: Feishu send failed: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+      "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
       "enabled_toolsets": [
         "terminal"
       ],
       "workdir": null,
-      "next_run_at": "2026-05-27T21:00:00+08:00"
+      "next_run_at": "2026-05-28T21:00:00+08:00"
     },
     {
       "id": "81c3d765872a",
@@ -215,15 +215,15 @@
       "schedule_display": "40 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 14
+        "completed": 16
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-17T09:26:44.724344+08:00",
-      "next_run_at": "2026-05-27T06:40:00+08:00",
-      "last_run_at": "2026-05-26T06:40:50.373966+08:00",
+      "next_run_at": "2026-05-29T06:40:00+08:00",
+      "last_run_at": "2026-05-28T07:13:27.253520+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -259,15 +259,15 @@
       "schedule_display": "30 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 12
+        "completed": 13
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-17T12:15:11.995020+08:00",
-      "next_run_at": "2026-05-27T12:30:00+08:00",
-      "last_run_at": "2026-05-26T12:30:55.321402+08:00",
+      "next_run_at": "2026-05-28T12:30:00+08:00",
+      "last_run_at": "2026-05-27T12:31:43.575732+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -300,15 +300,15 @@
       "schedule_display": "10 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 13
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-17T23:32:20.599824+08:00",
-      "next_run_at": "2026-05-27T04:10:00+08:00",
-      "last_run_at": "2026-05-26T04:26:26.834960+08:00",
+      "next_run_at": "2026-05-29T04:10:00+08:00",
+      "last_run_at": "2026-05-28T04:54:17.161801+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -339,14 +339,14 @@
       "schedule_display": "40 0 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-19T00:13:03.105548+08:00",
-      "last_run_at": "2026-05-27T00:40:03.709062+08:00",
+      "last_run_at": "2026-05-28T00:44:57.239395+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -356,7 +356,7 @@
         "terminal"
       ],
       "workdir": null,
-      "next_run_at": "2026-05-28T00:40:00+08:00"
+      "next_run_at": "2026-05-29T00:40:00+08:00"
     },
     {
       "id": "dcaf6f6f5868",
@@ -456,15 +456,15 @@
       "schedule_display": "0 20 * * *",
       "repeat": {
         "times": null,
-        "completed": 11
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-19T00:32:25.004434+08:00",
-      "next_run_at": "2026-05-27T20:00:00+08:00",
-      "last_run_at": "2026-05-26T05:12:06.780175+08:00",
+      "next_run_at": "2026-05-28T20:00:00+08:00",
+      "last_run_at": "2026-05-27T20:18:42.107477+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -498,15 +498,15 @@
       "schedule_display": "40 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 8
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-19T00:32:57.288652+08:00",
-      "next_run_at": "2026-05-27T04:30:00+08:00",
-      "last_run_at": "2026-05-26T04:32:21.926136+08:00",
+      "next_run_at": "2026-05-29T04:30:00+08:00",
+      "last_run_at": "2026-05-28T05:27:36.790679+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -581,15 +581,15 @@
       "schedule_display": "0 * * * *",
       "repeat": {
         "times": null,
-        "completed": 156
+        "completed": 192
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-19T00:33:13.712523+08:00",
-      "next_run_at": "2026-05-27T01:00:00+08:00",
-      "last_run_at": "2026-05-27T00:00:26.632867+08:00",
+      "next_run_at": "2026-05-28T13:00:00+08:00",
+      "last_run_at": "2026-05-28T12:00:56.111283+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -618,15 +618,15 @@
       "schedule_display": "0 23 * * *",
       "repeat": {
         "times": null,
-        "completed": 8
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-19T00:33:14.721045+08:00",
-      "next_run_at": "2026-05-27T23:00:00+08:00",
-      "last_run_at": "2026-05-26T23:00:17.639568+08:00",
+      "next_run_at": "2026-05-28T23:00:00+08:00",
+      "last_run_at": "2026-05-27T23:12:14.491503+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -696,17 +696,17 @@
       "schedule_display": "30 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-21T23:19:17.595689+08:00",
-      "next_run_at": "2026-05-27T07:30:00+08:00",
-      "last_run_at": "2026-05-26T07:30:35.906938+08:00",
+      "next_run_at": "2026-05-29T07:30:00+08:00",
+      "last_run_at": "2026-05-28T08:15:37.364936+08:00",
       "last_status": "error",
-      "last_error": "Script exited with code 1\nstdout:\n[SEND] Delivering 1 items to WeChat\n[FAIL] Delivery failed, will retry",
+      "last_error": "Script exited with code 1\nstdout:\n[SEND] Delivering 146 items to WeChat\n[FAIL] Delivery failed, will retry",
       "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
@@ -733,17 +733,17 @@
       "schedule_display": "0 13 * * *",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 7
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-21T23:19:18.605434+08:00",
-      "next_run_at": "2026-05-27T13:00:00+08:00",
-      "last_run_at": "2026-05-26T13:19:24.760355+08:00",
+      "next_run_at": "2026-05-28T13:00:00+08:00",
+      "last_run_at": "2026-05-27T13:00:19.013236+08:00",
       "last_status": "error",
-      "last_error": "Script exited with code 1\nstdout:\n[SEND] Delivering 3 items to WeChat\n[FAIL] Delivery failed, will retry",
+      "last_error": "Script exited with code 1\nstdout:\n[SEND] Delivering 42 items to WeChat\n[FAIL] Delivery failed, will retry",
       "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
@@ -770,18 +770,18 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-21T23:19:19.614349+08:00",
-      "next_run_at": "2026-05-27T21:00:00+08:00",
-      "last_run_at": "2026-05-26T21:00:37.828833+08:00",
+      "next_run_at": "2026-05-28T21:00:00+08:00",
+      "last_run_at": "2026-05-27T21:01:32.189232+08:00",
       "last_status": "error",
-      "last_error": "Script exited with code 1\nstdout:\n[SEND] Delivering 3 items to WeChat\n[FAIL] Delivery failed, will retry",
-      "last_delivery_error": "delivery error: Feishu send failed: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+      "last_error": "Script exited with code 1\nstdout:\n[SEND] Delivering 131 items to WeChat\n[FAIL] Delivery failed, will retry",
+      "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
       "enabled_toolsets": null,
@@ -807,17 +807,17 @@
       "schedule_display": "20 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-22T00:12:15.245740+08:00",
-      "next_run_at": "2026-05-27T06:20:00+08:00",
-      "last_run_at": "2026-05-26T06:21:02.837852+08:00",
-      "last_status": "error",
-      "last_error": "Script exited with code 1\nstdout:\n2026-05-26 06:20 — Changes detected\n  Committed: 125 files changed\n  ERROR: push failed — check /tmp/obsidian-git-sync.log",
+      "next_run_at": "2026-05-29T06:20:00+08:00",
+      "last_run_at": "2026-05-28T07:12:47.227122+08:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
@@ -845,15 +845,15 @@
       "schedule_display": "0 23 * * *",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-22T00:12:17.477707+08:00",
-      "next_run_at": "2026-05-27T23:00:00+08:00",
-      "last_run_at": "2026-05-26T23:00:21.993360+08:00",
+      "next_run_at": "2026-05-28T23:00:00+08:00",
+      "last_run_at": "2026-05-27T23:12:19.511106+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -883,15 +883,15 @@
       "schedule_display": "0 8,14,20 * * *",
       "repeat": {
         "times": null,
-        "completed": 11
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-23T12:36:58.888073+08:00",
-      "next_run_at": "2026-05-27T08:00:00+08:00",
-      "last_run_at": "2026-05-26T20:00:41.700307+08:00",
+      "next_run_at": "2026-05-28T14:00:00+08:00",
+      "last_run_at": "2026-05-28T08:15:20.332629+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -954,19 +954,20 @@
         "expr": "0 7 * * *",
         "display": "0 7 * * *"
       },
-      "deliver": "origin,feishu",
+      "deliver": "origin",
       "enabled": true,
       "state": "scheduled",
       "created_at": "2026-05-23T17:09:05.994738+08:00",
-      "next_run_at": "2026-05-27T07:00:00+08:00",
-      "last_run_at": "2026-05-26T22:01:54.941930+08:00",
+      "next_run_at": "2026-05-29T07:00:00+08:00",
+      "last_run_at": "2026-05-28T10:08:19.075460+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "paused_at": null,
       "paused_reason": null,
       "skill": "hermes-obsidian-archive",
-      "provider": "deepseek"
+      "provider": "deepseek",
+      "schedule_display": "0 7 * * *"
     },
     {
       "id": "merged-evening-briefing",
@@ -986,8 +987,8 @@
       "enabled": true,
       "state": "scheduled",
       "created_at": "2026-05-23T17:09:05.994757+08:00",
-      "next_run_at": "2026-05-27T20:30:00+08:00",
-      "last_run_at": "2026-05-26T20:31:48.637536+08:00",
+      "next_run_at": "2026-05-28T20:30:00+08:00",
+      "last_run_at": "2026-05-27T20:42:57.790317+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -1010,8 +1011,8 @@
       "enabled": true,
       "state": "scheduled",
       "created_at": "2026-05-23T17:17:33.058892+08:00",
-      "next_run_at": "2026-05-27T01:30:00+08:00",
-      "last_run_at": "2026-05-26T01:33:58.870991+08:00",
+      "next_run_at": "2026-05-29T01:30:00+08:00",
+      "last_run_at": "2026-05-28T01:33:58.454887+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -1023,25 +1024,26 @@
     },
     {
       "id": "unified-selfcheck-retry",
-      "name": "凌晨统一自检+失败重试（06:50）",
+      "name": "凌晨统一自检+失败重试（00:10）",
       "script": "daily-midnight-check.py",
       "no_agent": true,
       "schedule": {
         "kind": "cron",
-        "expr": "50 6 * * *",
-        "display": "50 6 * * *"
+        "expr": "10 0 * * *",
+        "display": "10 0 * * *"
       },
       "deliver": "local",
       "enabled": true,
       "state": "scheduled",
       "created_at": "2026-05-23T17:17:33.058908+08:00",
-      "next_run_at": "2026-05-27T06:50:00+08:00",
-      "last_run_at": "2026-05-26T06:51:06.472764+08:00",
+      "next_run_at": "2026-05-29T00:10:00+08:00",
+      "last_run_at": "2026-05-28T08:03:28.168598+08:00",
       "last_status": "error",
-      "last_error": "Script exited with code 1\nstdout:\n凌晨统一自检 — 2026-05-26 06:50:37\n  凌晨统一自检 — 2026-05-26 06:50:37\n========================================================\n\n──────────────────────────────────────\n📋 2. 失败/未运行任务重试\n──────────────────────────────────────\n  共 32 个任务\n    🔄 [知识库自动维护] — 上次报错 (error)\n  ✅     执行失败: 'utf-8' codec can't decode byte 0xe4 in position 72: invalid continuation byte\n    🔄 [微信晚间批量投递] — 上次报错 (error)\n  ✅     执行成功\n    🔄 [Obsidian vault git sync - morning] — 上次报错 (error)\n  ✅     执行失败: 2026-05-26 06:51 — Changes detected\n  Committed: 10 files changed\n  ERROR: push failed — check /tmp/obsidian-git-sync.log\n\n    🔄 [Obsidian vault git sync - evening] — 上次报错 (error)\n  ✅     执行成功\n    🔄 [晚间AI情报快讯（合并）] — 上次报错 (error)\n  ✅     hermes cron run 触发成功\n  ⚠️  达到本轮重试上限 (5)，剩余跳过\n\\n──────────────────────────────────────\n📋 3. 手工维护索引过期检测\n──────────────────────────────────────\n  ❌ 🔧工具笔记索引 已 67 小时未更新（阈值48h）\n  ❌ 🛠Skills文档索引 已 68 小时未更新（阈值48h）\n\n────────────────────────────────────────────────────────\n  ❌ 🔧工具笔记索引 已 67 小时未更新（阈值48h）\n  ❌ 🛠Skills文档索引 已 68 小时未更新（阈值48h）\n  共 2 个问题",
+      "last_error": "Script timed out after 300s: /Users/liuwei/.hermes/scripts/daily-midnight-check.py",
       "last_delivery_error": null,
       "skills": [],
       "skill": null,
+      "schedule_display": "10 0 * * *",
       "prompt": ""
     },
     {
@@ -1058,8 +1060,8 @@
       "enabled": true,
       "state": "scheduled",
       "created_at": "2026-05-23T17:59:48.297058+08:00",
-      "next_run_at": "2026-05-27T02:00:00+08:00",
-      "last_run_at": "2026-05-26T02:07:26.306682+08:00",
+      "next_run_at": "2026-05-29T02:00:00+08:00",
+      "last_run_at": "2026-05-28T02:06:55.097490+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -1087,18 +1089,18 @@
       "schedule_display": "35 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-24T16:04:52.681147+08:00",
-      "next_run_at": "2026-05-27T07:35:00+08:00",
-      "last_run_at": "2026-05-26T07:01:03.832508+08:00",
+      "next_run_at": "2026-05-29T07:35:00+08:00",
+      "last_run_at": "2026-05-28T08:15:20.380473+08:00",
       "last_status": "ok",
       "last_error": null,
-      "last_delivery_error": "delivery to weixin:o9cq80_qR7JsvMCuLrvxGNriW_es@im.wechat failed: No module named 'gateway.platforms.discord'",
+      "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
       "enabled_toolsets": null,
@@ -1125,17 +1127,17 @@
       "schedule_display": "0 */2 * * *",
       "repeat": {
         "times": null,
-        "completed": 28
+        "completed": 46
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-24T17:08:09.161569+08:00",
-      "next_run_at": "2026-05-27T02:00:00+08:00",
-      "last_run_at": "2026-05-27T00:02:00.747321+08:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-05-28T14:00:00+08:00",
+      "last_run_at": "2026-05-28T12:05:56.120537+08:00",
+      "last_status": "error",
+      "last_error": "Script timed out after 300s: /Users/liuwei/.hermes/scripts/network-recovery-check.py",
       "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
@@ -1163,15 +1165,15 @@
       "schedule_display": "0 23 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-26T22:00:37.594096+08:00",
-      "next_run_at": "2026-05-27T23:00:00+08:00",
-      "last_run_at": "2026-05-26T23:00:19.172250+08:00",
+      "next_run_at": "2026-05-28T23:00:00+08:00",
+      "last_run_at": "2026-05-27T23:12:15.673246+08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -1423,7 +1425,7 @@
     },
     {
       "id": "2e6319697f57",
-      "name": "NotebookLM session 每日续期（03:00）",
+      "name": "NotebookLM session 续期（每6小时）",
       "prompt": "",
       "skills": [],
       "skill": null,
@@ -1435,22 +1437,22 @@
       "context_from": null,
       "schedule": {
         "kind": "cron",
-        "expr": "0 3 * * *",
-        "display": "0 3 * * *"
+        "expr": "0 */6 * * *",
+        "display": "0 */6 * * *"
       },
-      "schedule_display": "0 3 * * *",
+      "schedule_display": "0 */6 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-26T23:04:58.130849+08:00",
-      "next_run_at": "2026-05-27T03:00:00+08:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-05-28T18:00:00+08:00",
+      "last_run_at": "2026-05-28T12:05:56.192508+08:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "local",
@@ -1498,5 +1500,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-05-27T00:40:03.709313+08:00"
+  "updated_at": "2026-05-28T12:10:01.062892+08:00"
 }

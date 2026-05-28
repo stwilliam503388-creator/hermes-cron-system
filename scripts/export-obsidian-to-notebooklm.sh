@@ -123,9 +123,10 @@ export_category() {
         fi
     done
 
-    for f in "$src"/*.md; do
+    # 递归扫描所有 .md 文件（包括子目录）
+    while IFS= read -r -d '' f; do
         clean_note "$f" "$dst" "$cat_name"
-    done
+    done < <(find "$src" -name '*.md' -print0)
 }
 
 export_category "$VAULT/工具笔记" "工具知识库" "工具笔记"
@@ -135,6 +136,9 @@ export_category "$VAULT/工作流" "工作流" "工作流"
 export_category "$VAULT/概念" "概念" "概念"
 export_category "$VAULT/对话归档" "对话归档" "对话归档"
 export_category "$VAULT/参考" "参考" "参考"
+export_category "$VAULT/课程项目" "课程项目" "课程项目"
+export_category "$VAULT/学习计划" "学习计划" "学习计划"
+export_category "$VAULT/资源" "资源" "资源"
 
 total=$(find "$EXPORT_DIR" -name "*.md" | wc -l | tr -d ' ')
 
